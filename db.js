@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
-const mongoURL = "mongodb://127.0.0.1:27017/practice"
+require("dotenv").config();
+//const mongoURL = MONGODB_URL_LOCAL;
+const mongoURL = process.env.MONGODB_URL;
 
 mongoose.connect(mongoURL);
+
+
 
 const db = mongoose.connection;
 
